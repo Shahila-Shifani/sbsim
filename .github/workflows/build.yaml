@@ -16,10 +16,10 @@ jobs:
   test:
     strategy:
       matrix:
-        # there is no 3.10.15 on mac
-        # see: https://raw.githubusercontent.com/actions/python-versions/main/versions-manifest.json
+        # Python >=3.11,<3.13 means only 3.11 is supported
+        # TensorFlow 2.15.1 requires this constraint
         os: [ubuntu-latest]
-        python-version: ['3.10.15', '3.11']
+        python-version: ['3.11']
 
         include:
           - os: macos-15-intel # updated intel-based

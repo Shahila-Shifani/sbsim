@@ -6,7 +6,7 @@ authors = []
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.10.12,<3.12"
+python = ">=3.11,<3.13"
 tensorflow = "2.15.1"
 
 # The "dm-reverb" package is meant for Linux only, so we are conditionally
@@ -24,6 +24,8 @@ gin-config = "^0.5.0"
 matplotlib = "^3.9.2"
 pandas = "^2.2.2"
 bidict = "^0.23.1"
+
+# pinned due to TensorFlow 2.15 compatibility constraints
 protobuf = "3.20.3"
 pint = "^0.24.3"
 holidays = "^0.56"
